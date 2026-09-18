@@ -114,3 +114,46 @@ This baseline does not replace:
 
 ## Integration with Copy & Conversion
 Customer-facing work must also satisfy the canonical Abneos Copy & Conversion Standard. Production readiness and conversion quality are separate gates; neither substitutes for the other.
+
+
+## Abneos extensions beyond the 32-check baseline
+
+### Infrastructure & Deployment (I)
+- I-01 DNS/domain — canonical domain, redirects and relevant DNS are intentional.
+- I-02 Cloud/edge configuration — production and preview bindings/routes/settings are separated and least-privilege where possible.
+- I-03 Environment separation — test/staging/production secrets, databases, payment modes and integrations cannot be accidentally crossed.
+- I-04 Database security — RLS, grants, security-definer functions and storage policies preserve public/private boundaries.
+- I-05 Privileged-key containment — service-role/administrative credentials execute server-side only and are appropriately scoped.
+- I-06 Deployment provenance — the deployed version can be tied to the intended repository commit/SHA.
+- I-07 Preview safety — staging/previews are non-indexable and access-controlled where private/admin functionality exists.
+- I-08 Edge resilience — rate limiting, WAF/DDoS and cache behaviour are reviewed where the platform supports them.
+
+### Business Logic & Journeys (J)
+Derive these checks from actual product rules. Never mark them PASS from generic static inspection alone.
+- J-01 Identity/ownership — a user cannot act as another user or business.
+- J-02 Object access — changing IDs/slugs/parameters cannot expose another party's private object.
+- J-03 State transitions — approval, claim, booking, redemption, order and workflow steps cannot be skipped or replayed incorrectly.
+- J-04 Payments/entitlements — provider success is verified server-side; amount/currency/entitlement are server-controlled; retries/replays are idempotent.
+- J-05 Privileged actions — admin/owner/tutor/staff operations require the intended role.
+- J-06 Communications — emails/messages go to the correct party once, with safe links and no unintended data disclosure.
+- J-07 Failure/recovery — interrupted external calls do not leave contradictory state.
+- J-08 Abuse/economic controls — coupons, credits, gift cards, quotas, trials and costly API/AI actions resist trivial replay/manipulation.
+
+## Release decision
+Use **BLOCKED / WARNING / PASS** as the primary release status. The numeric score is secondary and must never override severity.
+- BLOCKED: unresolved Critical finding, or High finding creating material security, privacy, data-loss, payment, authorisation or production-availability risk.
+- WARNING: non-blocking residual finding with a documented owner/next action.
+- PASS: no blocking findings and required verification completed.
+
+If a check cannot be performed, record **DEFERRED** with the exact reason and verification required. Never silently convert missing evidence into PASS.
+
+## Production verification
+For every material release:
+1. Verify intended commit/deployment provenance.
+2. Smoke-test representative public routes at mobile and desktop widths.
+3. Verify critical forms/actions using production-safe test paths.
+4. Verify authentication/authorisation boundaries where relevant.
+5. Check console/runtime errors and critical network failures.
+6. Verify canonical/indexability behaviour.
+7. Re-run affected readiness checks.
+8. Record residual WARNING/DEFERRED items and owner/next action.
