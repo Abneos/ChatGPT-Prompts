@@ -1,0 +1,42 @@
+{
+  "brand": "Abneos",
+  "status": "source-controlled",
+  "canonical_repository": "Abneos/abneos-website",
+  "canonical_site": "https://abneos.com",
+  "source_priority": [
+    "existing production component",
+    "existing production page pattern",
+    "this contract",
+    "canonical live site",
+    "new pattern derived from the above"
+  ],
+  "ui_source_paths": [
+    "src",
+    "public",
+    "index.html"
+  ],
+  "extraction_rule": "Inspect current repository files before visual generation. Never infer unresolved tokens from memory.",
+  "tokens": {
+    "colours": "extract-from-repo",
+    "typography": "extract-from-repo",
+    "spacing": "extract-from-repo",
+    "radii": "extract-from-repo",
+    "shadows": "extract-from-repo"
+  },
+  "components": {
+    "navigation": "reuse-if-present",
+    "buttons": "reuse-if-present",
+    "cards": "reuse-if-present",
+    "forms": "reuse-if-present",
+    "badges": "reuse-if-present"
+  },
+  "visual_grammar": {
+    "instruction": "Document recurring layout, imagery, icon, density and responsive patterns from canonical implementation before inventing any new pattern."
+  },
+  "prohibited": [
+    "invented brand colours",
+    "invented fonts",
+    "invented logo treatment",
+    "generic SaaS styling used as a substitute for source inspection"
+  ]
+}
