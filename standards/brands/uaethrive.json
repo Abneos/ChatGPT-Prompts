@@ -1,0 +1,46 @@
+{
+  "brand": "UAEThrive",
+  "status": "active",
+  "canonical_repository": "Abneos/uaethrive-platform",
+  "canonical_site": "https://uaethrive.com",
+  "source_files": [
+    "src/web/components/ui/ButtonLink.tsx",
+    "src/web/components/ui/SurfaceCard.tsx",
+    "src/web/routes/CategoryPageRoute.tsx"
+  ],
+  "typography": {
+    "body": "Tailwind/system sans stack",
+    "headings": "Tailwind/system sans stack; bold/semibold hierarchy"
+  },
+  "colours": {
+    "navy": "#0B3A6A",
+    "navy_dark": "#0A2E54",
+    "teal": "#008080",
+    "teal_bright": "#00C2B8",
+    "aqua_light": "#BCF3F0",
+    "aqua_surface": "#E8FFFD",
+    "white": "#FFFFFF",
+    "slate_text": "slate-600/700/900"
+  },
+  "component_patterns": {
+    "hero": "Dark navy-to-deeper-navy gradient with low-opacity category imagery; aqua eyebrow; white heading; blue-100 support text.",
+    "buttons": "Rounded-xl. Primary teal #008080 with white text; hover bright teal #00C2B8. Secondary white with teal border/text and pale aqua hover.",
+    "cards": "Rounded-2xl white SurfaceCard with subtle navy border, shadow-sm and hover shadow-md.",
+    "forms": "Rounded-xl white controls with slate text and bright-teal focus ring.",
+    "category_media": "Image-backed category/subcategory cards with restrained image height and teal hover border."
+  },
+  "visual_grammar": {
+    "tone": "Trust-first UAE business discovery; clean directory utility rather than lifestyle luxury.",
+    "density": "Structured, searchable, card-led and practical.",
+    "icons": "Functional, restrained; colour anchors remain navy/teal.",
+    "imagery": "Use relevant UAE/local-business category imagery as a low-opacity hero layer or card thumbnail, not full-screen decorative stock.",
+    "graphics": "For social/blog graphics, anchor with navy #0B3A6A, teal #008080/#00C2B8 and aqua #BCF3F0. Use concise trust/discovery-led headlines, restrained local imagery and strong hierarchy."
+  },
+  "prohibited": [
+    "gold-and-black luxury UAE aesthetic",
+    "generic Dubai skyline as default imagery when article subject is unrelated",
+    "purple SaaS gradients",
+    "overly ornate Arabic-inspired motifs not present in the site",
+    "mixing Abneos visual identity into UAEThrive assets"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "policy": "Resolve brand before visual generation. Canonical implementation beats memory or generic styling.",
+  "brands": {
+    "abneos": {
+      "name": "Abneos",
+      "status": "active",
+      "domain": "https://abneos.com",
+      "repository": "Abneos/abneos-website",
+      "contract": "standards/brands/abneos.json",
+      "ui_sources": [
+        "src",
+        "public",
+        "index.html"
+      ],
+      "notes": "Primary corporate/service brand."
+    },
+    "uanduni": {
+      "name": "U&Uni",
+      "status": "active",
+      "domain": "https://uanduni.co.uk",
+      "repository": "Abneos/uanduni-website",
+      "contract": "standards/brands/uanduni.json",
+      "ui_sources": [
+        "src",
+        "public"
+      ],
+      "notes": "Education brand. Preserve its own visual identity."
+    },
+    "uaethrive": {
+      "name": "UAEThrive",
+      "status": "active",
+      "domain": "https://uaethrive.com",
+      "repository": "Abneos/uaethrive-platform",
+      "contract": "standards/brands/uaethrive.json",
+      "ui_sources": [
+        "src/web/components",
+        "src/web/routes",
+        "apps/web/src"
+      ],
+      "notes": "Directory/platform brand."
+    },
+    "bizthrive": {
+      "name": "BizThrive",
+      "status": "active",
+      "domain": "https://bizthrive.co.uk",
+      "repository": "Abneos/bizthrive",
+      "contract": "standards/brands/bizthrive.json",
+      "ui_sources": [
+        "app",
+        "components"
+      ],
+      "notes": "UK local business directory brand."
+    }
+  }
+}

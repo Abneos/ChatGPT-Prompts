@@ -1,0 +1,51 @@
+{
+  "brand": "Abneos",
+  "status": "active",
+  "canonical_repository": "Abneos/abneos-website",
+  "canonical_site": "https://abneos.com",
+  "source_files": [
+    "src/index.css",
+    "src/components/Header.tsx",
+    "src/pages/HomeWithDiscovery.tsx"
+  ],
+  "typography": {
+    "body": "Plus Jakarta Sans",
+    "headings": "Outfit",
+    "fallback": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
+  },
+  "colours": {
+    "navy": "#0B1F33",
+    "navy_light": "#132E4A",
+    "royal": "#155EEF",
+    "royal_hover": "#1049BD",
+    "sky_light": "#38BDF8",
+    "teal": "#008080",
+    "teal_light": "#2DD4BF",
+    "gold": "#B45309",
+    "offwhite": "#F7F9FC",
+    "dark": "#17212B",
+    "muted": "#475569",
+    "border": "#CBD5E1"
+  },
+  "component_patterns": {
+    "header": "Dark navy sticky header; ABNEOS wordmark in Outfit; compact square mark with teal/gold/sky accents; CTA in royal blue.",
+    "navigation": "Rounded-md dark active states; compact text; mobile menu stays navy.",
+    "buttons": "Primary royal blue #155EEF with rounded-xl corners; white text; hover #1049BD. Secondary patterns derive from navy/teal surfaces.",
+    "cards": "Use restrained rounded-xl/2xl white or navy surfaces, clear borders, minimal shadow; avoid decorative gradients unless already present in source.",
+    "focus": "3px royal outline on light surfaces; sky outline on dark navy."
+  },
+  "visual_grammar": {
+    "tone": "Professional, technical, outcome-led; dark navy anchors with royal/teal accents and limited gold highlight.",
+    "density": "Structured and relatively compact rather than oversized generic SaaS hero styling.",
+    "icons": "Lucide icons used as functional accents; small contained icon surfaces are acceptable.",
+    "imagery": "Use real/project-specific imagery where available; do not substitute abstract purple gradient art.",
+    "graphics": "For branded social graphics, use navy as the dominant anchor, royal/teal accents, Outfit-led headings and restrained geometric structure. Gold should be a minor highlight, not the main field."
+  },
+  "prohibited": [
+    "purple-first or violet gradient identity",
+    "invented lowercase abneos wordmark",
+    "generic neon SaaS aesthetic",
+    "invented logo marks",
+    "typography other than documented brand families unless technically unavoidable"
+  ]
+}
