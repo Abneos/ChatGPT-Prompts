@@ -1,41 +1,51 @@
 {
   "brand": "U&Uni",
-  "status": "source-controlled",
+  "status": "active",
   "canonical_repository": "Abneos/uanduni-website",
   "canonical_site": "https://uanduni.co.uk",
-  "source_priority": [
-    "existing production component",
-    "existing production page pattern",
-    "this contract",
-    "canonical live site",
-    "new pattern derived from the above"
+  "source_files": [
+    "src/index.css",
+    "src/components/layout/Header.tsx",
+    "src/views/HomePage.tsx",
+    "src/views/RecruitmentPage.tsx"
   ],
-  "ui_source_paths": [
-    "src",
-    "public"
-  ],
-  "extraction_rule": "Inspect current repository files before visual generation. Never infer unresolved tokens from memory.",
-  "tokens": {
-    "colours": "extract-from-repo",
-    "typography": "extract-from-repo",
-    "spacing": "extract-from-repo",
-    "radii": "extract-from-repo",
-    "shadows": "extract-from-repo"
+  "typography": {
+    "body": "System sans stack (-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif)",
+    "headings": "Same system sans stack; heavy weights (font-black/font-bold) rather than a separate display face."
   },
-  "components": {
-    "navigation": "reuse-if-present",
-    "buttons": "reuse-if-present",
-    "cards": "reuse-if-present",
-    "forms": "reuse-if-present",
-    "badges": "reuse-if-present"
+  "colours": {
+    "primary_ink": "slate-950 / near-black",
+    "text": "slate-900",
+    "muted": "slate-600 / slate-500",
+    "surface": "white",
+    "soft_surface": "slate-50",
+    "sky": "sky-50 to sky-900 accents",
+    "emerald": "emerald-50/100/600 accents",
+    "rose": "rose-50/100 accents",
+    "amber": "amber-50/400 accents",
+    "violet": "violet-50 accents"
+  },
+  "component_patterns": {
+    "header": "White translucent sticky header with slate border/shadow; square black U mark; brand name 'U and Your Uni'; compact rounded-pill navigation; dark CTA.",
+    "hero": "Light, airy sections using white/slate surfaces with selective pastel sky/amber/emerald/rose support colours; dark slate feature panels may be used as contrast.",
+    "buttons": "Rounded-full dark slate primary CTAs on standard marketing pages; recruitment flow also uses amber-400 CTA on dark slate hero.",
+    "cards": "Rounded-3xl pastel or white cards with fine slate borders and restrained shadow.",
+    "recruitment": "Dark slate-950 hero, amber-400 highlight and CTA, stone-50 page background, white rounded-2xl application cards/forms.",
+    "focus": "3px sky-400 outline."
   },
   "visual_grammar": {
-    "instruction": "Document recurring layout, imagery, icon, density and responsive patterns from canonical implementation before inventing any new pattern."
+    "tone": "Calm, independent, student-friendly, practical and modern.",
+    "density": "Airy but information-rich; clear pathway cards rather than decorative visual excess.",
+    "icons": "Lucide icons, typically slate with contextual accent colours.",
+    "imagery": "Supportive and credible student/university imagery where used; avoid glossy corporate stock or luxury styling.",
+    "graphics": "For mentor recruitment and social graphics, lead with slate/white, use sky or amber as a controlled accent, retain rounded friendly geometry and heavy sans headings. Pastel audience colours may support segmentation but should not overwhelm the composition."
   },
   "prohibited": [
-    "invented brand colours",
-    "invented fonts",
-    "invented logo treatment",
-    "generic SaaS styling used as a substitute for source inspection"
-  ]
+    "burgundy/cream Jane History identity on main U&Uni brand assets",
+    "serif display typography for main U&Uni",
+    "generic navy-and-gold university crest styling",
+    "overly corporate recruitment visuals",
+    "invented gradients inconsistent with current site"
+  ],
+  "sub_brand_note": "Jane History Tuition has its own scoped identity in src/jane.css and must not be used as U&Uni's master brand."
 }
