@@ -40,3 +40,45 @@ Branded visual work is complete only when:
 - existing components/patterns were reused where available;
 - no unapproved visual system was introduced;
 - mobile behaviour remains consistent with the brand.
+
+
+## Branded graphics and social-image generation
+
+This standard applies to generated visual assets as well as website UI, including:
+- social post graphics;
+- blog article social images;
+- recruitment graphics;
+- ad creatives;
+- presentation covers;
+- infographic panels;
+- campaign images;
+- thumbnails and promotional artwork.
+
+Before generating a branded graphic:
+1. Resolve the brand from the registry.
+2. Inspect the canonical brand contract and repository.
+3. Use approved logo treatment, typography, colours, spacing, image style and recurring visual motifs from the brand.
+4. Match the intended channel and aspect ratio without changing the core visual identity.
+5. If the asset is based on a URL or article, preserve the brand system while adapting the subject matter to the content.
+6. Do not use a generic image-generation aesthetic as a substitute for the brand's visual system.
+7. If a source photo/illustration style exists, prefer that style; otherwise use the closest documented brand-safe treatment.
+
+### Graphic-generation handoff
+When an image-generation tool is used, the generation prompt must include the resolved brand constraints explicitly, including:
+- brand name;
+- approved palette;
+- typography direction;
+- logo placement/treatment if a logo is available;
+- composition rules;
+- imagery style;
+- prohibited visual motifs;
+- target dimensions/aspect ratio;
+- campaign/article subject.
+
+If the brand contract is incomplete, inspect the canonical implementation before generation rather than inventing missing styling.
+
+## Cross-brand graphics
+Where one brand is promoting an opportunity or article belonging to another:
+- the publishing brand owns the outer visual system;
+- the partner brand may appear as a clearly secondary endorsed/featured identity;
+- do not blend two unrelated design systems into a hybrid unless an approved co-brand pattern exists.
