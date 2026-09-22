@@ -1,41 +1,48 @@
 {
   "brand": "BizThrive",
-  "status": "source-controlled",
+  "status": "active",
   "canonical_repository": "Abneos/bizthrive",
   "canonical_site": "https://bizthrive.co.uk",
-  "source_priority": [
-    "existing production component",
-    "existing production page pattern",
-    "this contract",
-    "canonical live site",
-    "new pattern derived from the above"
+  "source_files": [
+    "app/globals.css",
+    "app/page.tsx"
   ],
-  "ui_source_paths": [
-    "app",
-    "components"
-  ],
-  "extraction_rule": "Inspect current repository files before visual generation. Never infer unresolved tokens from memory.",
-  "tokens": {
-    "colours": "extract-from-repo",
-    "typography": "extract-from-repo",
-    "spacing": "extract-from-repo",
-    "radii": "extract-from-repo",
-    "shadows": "extract-from-repo"
+  "typography": {
+    "body": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+    "headings": "Inter/system sans; very heavy weights with tight tracking"
   },
-  "components": {
-    "navigation": "reuse-if-present",
-    "buttons": "reuse-if-present",
-    "cards": "reuse-if-present",
-    "forms": "reuse-if-present",
-    "badges": "reuse-if-present"
+  "colours": {
+    "ink": "#102338",
+    "muted": "#607083",
+    "navy": "#123A5A",
+    "teal": "#0B7C78",
+    "teal_dark": "#075C59",
+    "mint": "#E9F7F4",
+    "cream": "#FBF7EF",
+    "coral": "#E96D4F",
+    "line": "#DFE7EB",
+    "white": "#FFFFFF"
+  },
+  "component_patterns": {
+    "header": "White translucent sticky header with ink wordmark and teal accent; dark ink CTA.",
+    "hero": "Cream-to-white gradient/radial mint treatment, large tight-tracked headline, teal eyebrow, two-column hero with white glassy card.",
+    "buttons": "Primary teal with rounded-12px corners; secondary white with line border; text CTAs use teal-dark underlined treatment.",
+    "cards": "White cards with fine line borders, 18-24px radius, restrained shadow and slight hover lift.",
+    "badges": "Mint/teal pill labels; coral reserved for gift-score/highlight use.",
+    "business_mark": "Compact rounded square using navy-to-teal gradient."
   },
   "visual_grammar": {
-    "instruction": "Document recurring layout, imagery, icon, density and responsive patterns from canonical implementation before inventing any new pattern."
+    "tone": "Local, useful, independent-business focused, warm but credible.",
+    "density": "Editorial/local-directory feel with generous spacing and compact cards.",
+    "icons": "Minimal; colour and typography carry most of the identity.",
+    "imagery": "Local-business and place imagery where useful; not mandatory on every asset.",
+    "graphics": "For social graphics use cream/white fields, teal/ink hierarchy, mint support shapes and occasional coral accent. Keep typography dominant and locally grounded."
   },
   "prohibited": [
-    "invented brand colours",
-    "invented fonts",
-    "invented logo treatment",
-    "generic SaaS styling used as a substitute for source inspection"
+    "corporate blue SaaS visual language",
+    "purple/violet gradients",
+    "heavy black luxury styling",
+    "overly playful consumer-brand illustration",
+    "UAEThrive navy/teal treatment copied verbatim"
   ]
 }
