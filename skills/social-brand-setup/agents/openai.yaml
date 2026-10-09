@@ -1,0 +1,4 @@
+interface:
+  display_name: "Social Brand Setup Pack"
+  short_description: "Branded social profiles, graphics and setup guides"
+  default_prompt: "Use $social-brand-setup to create a brand setup pack for my selected social platforms."
