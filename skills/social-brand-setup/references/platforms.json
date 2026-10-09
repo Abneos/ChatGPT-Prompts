@@ -1,0 +1,795 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-09",
+  "policy": "Verify selected fields against official sources on every delivery. Numeric working targets are NOT certified platform hard limits. Null means unknown, not unlimited.",
+  "platforms": [
+    {
+      "id": "facebook",
+      "label": "Facebook Page",
+      "account_type": "Facebook Page",
+      "setup_url": "https://www.facebook.com/pages/create/",
+      "discovery_sources": [
+        "https://www.facebook.com/help/104002523024878"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": 70,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "bio",
+          "working_max": 155,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "profile",
+        "cover"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram professional profile",
+      "account_type": "Instagram professional profile",
+      "setup_url": "https://www.instagram.com/",
+      "discovery_sources": [
+        "https://help.instagram.com/502981923235522/"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": 30,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": 30,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "bio",
+          "working_max": 150,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "profile"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn Company Page",
+      "account_type": "LinkedIn Company Page",
+      "setup_url": "https://www.linkedin.com/company/setup/new/",
+      "discovery_sources": [
+        "https://www.linkedin.com/help/linkedin/answer/a543852"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": 100,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "tagline",
+          "working_max": 120,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": 1500,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "logo",
+        "cover"
+      ],
+      "images": [
+        {
+          "slot": "logo",
+          "recommended_width": 400,
+          "recommended_height": 400,
+          "formats": [
+            "PNG",
+            "JPEG"
+          ],
+          "max_mb": 3,
+          "status": "verified",
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309/image-specifications-for-your-linkedin-pages-and-career-pages",
+          "checked_at": "2026-10-09",
+          "account_type": "Company Page",
+          "notes": "Keep essential content central; cover may crop across devices."
+        },
+        {
+          "slot": "cover",
+          "recommended_width": 1512,
+          "recommended_height": 256,
+          "formats": [
+            "PNG",
+            "JPEG"
+          ],
+          "max_mb": 3,
+          "status": "verified",
+          "source_url": "https://www.linkedin.com/help/linkedin/answer/a563309/image-specifications-for-your-linkedin-pages-and-career-pages",
+          "checked_at": "2026-10-09",
+          "account_type": "Company Page",
+          "notes": "Keep essential content central; cover may crop across devices."
+        }
+      ],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "tiktok",
+      "label": "TikTok Business Account",
+      "account_type": "TikTok Business Account",
+      "setup_url": "https://www.tiktok.com/",
+      "discovery_sources": [
+        "https://support.tiktok.com/"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "website",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "profile"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "youtube",
+      "label": "YouTube channel",
+      "account_type": "YouTube channel",
+      "setup_url": "https://www.youtube.com/",
+      "discovery_sources": [
+        "https://support.google.com/youtube/"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "website",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "profile",
+        "banner"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "pinterest",
+      "label": "Pinterest business account",
+      "account_type": "Pinterest business account",
+      "setup_url": "https://www.pinterest.com/business/create/",
+      "discovery_sources": [
+        "https://help.pinterest.com/"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "website",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "profile",
+        "cover"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "x",
+      "label": "X account",
+      "account_type": "X account",
+      "setup_url": "https://x.com/",
+      "discovery_sources": [
+        "https://help.x.com/"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "website",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "profile",
+        "header"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "threads",
+      "label": "Threads profile",
+      "account_type": "Threads profile",
+      "setup_url": "https://www.threads.com/",
+      "discovery_sources": [
+        "https://help.instagram.com/"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "website",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "profile"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "google-business-profile",
+      "label": "Google Business Profile",
+      "account_type": "Google Business Profile",
+      "setup_url": "https://www.google.com/business/",
+      "discovery_sources": [
+        "https://support.google.com/business/answer/3038177"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "website",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "logo",
+        "cover"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "whatsapp-business",
+      "label": "WhatsApp Business app",
+      "account_type": "WhatsApp Business app",
+      "setup_url": "https://business.whatsapp.com/",
+      "discovery_sources": [
+        "https://faq.whatsapp.com/"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "website",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "profile"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "bluesky",
+      "label": "Bluesky profile",
+      "account_type": "Bluesky profile",
+      "setup_url": "https://bsky.app/",
+      "discovery_sources": [
+        "https://bsky.social/about/support"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "website",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "profile",
+        "banner"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "snapchat",
+      "label": "Snapchat public business profile",
+      "account_type": "Snapchat public business profile",
+      "setup_url": "https://forbusiness.snapchat.com/",
+      "discovery_sources": [
+        "https://businesshelp.snapchat.com/"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "website",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "profile"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "reddit",
+      "label": "Reddit brand account",
+      "account_type": "Reddit brand account",
+      "setup_url": "https://www.reddit.com/",
+      "discovery_sources": [
+        "https://support.reddithelp.com/"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "website",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "profile",
+        "banner"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    },
+    {
+      "id": "nextdoor",
+      "label": "Nextdoor business page",
+      "account_type": "Nextdoor business page",
+      "setup_url": "https://business.nextdoor.com/",
+      "discovery_sources": [
+        "https://help.nextdoor.com/"
+      ],
+      "fields": [
+        {
+          "id": "display_name",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "username",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "description",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        },
+        {
+          "id": "website",
+          "working_max": null,
+          "hard_max": null,
+          "counting": "confirm",
+          "status": "needs_verification",
+          "source_url": null,
+          "checked_at": null
+        }
+      ],
+      "required_image_slots": [
+        "logo",
+        "cover"
+      ],
+      "images": [],
+      "status": "needs_verification",
+      "restrictions": [
+        "Confirm country, account type, eligibility and action-button availability."
+      ],
+      "field_coverage_status": "discover_exact_fields_at_delivery"
+    }
+  ]
+}
