@@ -26,7 +26,7 @@ See `standards/ABNEOS_BRAND_IDENTITY_STANDARD.md`.
 After a brand has an approved, hash-pinned asset with `width` and `height` (intrinsic aspect ratio), generate the creative background separately and render:
 
 ```bash
-node brand-registry/render.mjs --brand uaethrive --variant primary --background /path/creative.png --out /path/branded.svg --width 1200 --height 630 --logo-width 320 --margin 40 --position bottom-right
+node brand-registry/render.mjs --brand uaethrive --variant wordmark --background /path/creative.png --out /path/branded.svg --width 1200 --height 630 --logo-width 320 --margin 40 --position bottom-right
 ```
 
 The SVG output embeds the unchanged original bytes of the approved SVG/PNG logo in a `data:` URL. This retains the original logo content without asking AI to redraw it. Rendering fails closed for a pending/unapproved brand, missing variant or changed original. The output is a final SVG, not a PNG; downstream tools can export PNG after visually verifying render and fonts. Background is scaled to cover canvas, so ensure text and faces are within safe cropping margins. This is an initial automated composition route, not a replacement for a full typography and layout engine.
@@ -60,3 +60,7 @@ The renderer never generates or approximates branding. It overlays the registere
 Run `node brand-registry/test-render.mjs` to exercise exact-byte embedding, rejection of checksum tampering, and rejection of unapproved brands. This test uses synthetic artwork, not an Abneos logo.
 
 Use `--variant` (not `--asset`) and let the manifest's intrinsic width and height establish aspect ratio. The working Node CLI example is in **Render approved branded artwork** above.
+
+## Current registration
+
+UAEThrive wordmark v1 has been byte-verified against the existing brand wiki file and registered with SHA-256. The brand wiki explicitly directs use of this wordmark **for the wiki**; use in other contexts should be visually reviewed. UAEThrive favicon candidates conflict and remain unapproved. All other brands are pending exact originals. Do not change favicons or site logos as part of this registry import.
