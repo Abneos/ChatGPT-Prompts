@@ -19,3 +19,4 @@ jobs:
         with:
           node-version: '22'
       - run: node brand-registry/validate.mjs
+      - run: node --test brand-registry/render.test.mjs
