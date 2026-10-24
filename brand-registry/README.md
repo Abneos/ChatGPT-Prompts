@@ -54,3 +54,15 @@ python brand-registry/render.py --brand uaethrive --variant primary --background
 The renderer never generates or approximates branding. It overlays the registered image bytes after checksum verification. A brand without approved assets fails closed; it cannot produce a falsely branded image.
 
 **Scope:** This is a local rendering utility, not an API or automatically deployed service. Existing ChatGPT image generation cannot automatically consume private GitHub assets without a connected retrieval/compositing workflow.
+
+## Deterministic artwork renderer
+
+After a brand is approved and its files are registered with SHA-256 checksums, render a brand-safe SVG by compositing the original file unchanged on top of a background image:
+
+```sh
+node brand-registry/render.mjs --brand uaethrive --asset wordmark --background creative.png --out artwork.svg --width 1200 --height 630 --position bottom-right --logo-width 320 --logo-height 85 --margin 48
+```
+
+This produces a self-contained SVG using the **original, checksum-verified logo bytes**. It refuses pending brands, missing variants, tampered artwork, or assets outside the approved registry. PNG/JPEG/WebP backgrounds are supported; approved overlays must be PNG or SVG. Browser/image-rasteriser compatibility must be tested before publishing to social channels. For print workflows, rasterise at the appropriate output resolution and inspect safe zones manually.
+
+Run the fixture test with `node brand-registry/test-render.mjs`. The test creates a temporary synthetic logo and asserts that exact bytes are embedded, a forged hash is rejected, and pending brands cannot render. The fixture does not represent any real brand.
