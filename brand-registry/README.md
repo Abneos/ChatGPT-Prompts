@@ -21,3 +21,16 @@ Run `node brand-registry/validate.mjs`. A brand with `pending_assets` is intenti
 5. Check resulting artwork for legibility, crops, brand safe area, and exact asset use.
 
 See `standards/ABNEOS_BRAND_IDENTITY_STANDARD.md`.
+
+## Render approved branded artwork
+After a brand has an approved, hash-pinned asset with `width` and `height` (intrinsic aspect ratio), generate the creative background separately and render:
+
+```bash
+node brand-registry/render.mjs --brand uaethrive --variant primary --background /path/creative.png --out /path/branded.svg --width 1200 --height 630 --logo-width 320 --margin 40 --position bottom-right
+```
+
+The SVG output embeds the unchanged original bytes of the approved SVG/PNG logo in a `data:` URL. This retains the original logo content without asking AI to redraw it. Rendering fails closed for a pending/unapproved brand, missing variant or changed original. The output is a final SVG, not a PNG; downstream tools can export PNG after visually verifying render and fonts. Background is scaled to cover canvas, so ensure text and faces are within safe cropping margins. This is an initial automated composition route, not a replacement for a full typography and layout engine.
+
+Test with `node --test brand-registry/render.test.mjs`.
+
+**Security:** only approved local registry files should be used for logos. Background must be a locally supplied, trusted image file. Do not feed untrusted SVG from external sources into public render pipelines without sanitising it.
