@@ -26,4 +26,4 @@ jobs:
           python-version: '3.12'
       - run: pip install -r brand-registry/requirements.txt
       - run: python -m unittest discover -s brand-registry -p 'test_*.py'
-      - run: node --test brand-registry/render.test.mjs
+      - run: node --test brand-registry/render.test.mjs brand-registry/approved-asset.test.mjs
