@@ -1,0 +1,29 @@
+name: Validate approved brand assets
+on:
+  pull_request:
+    paths:
+      - 'brand-registry/**'
+      - 'standards/ABNEOS_BRAND_IDENTITY_STANDARD.md'
+      - '.github/workflows/brand-assets.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'brand-registry/**'
+      - '.github/workflows/brand-assets.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node brand-registry/validate.mjs
+      - run: node brand-registry/audit.mjs
+      - run: node brand-registry/test-render.mjs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r brand-registry/requirements.txt
+      - run: python -m unittest discover -s brand-registry -p 'test_*.py'
+      - run: node --test brand-registry/render.test.mjs
