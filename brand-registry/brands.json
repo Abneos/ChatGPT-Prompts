@@ -13,7 +13,27 @@
       "status": "pending_assets",
       "assets": {},
       "approved_at": null,
-      "approved_by": null
+      "approved_by": null,
+      "candidates": [
+        {
+          "variant": "wordmark",
+          "path": "brand-registry/candidates/uaethrive/assets-uaethrive-wordmark.svg",
+          "source": "Abneos/uaethrive-platform:uaethrive-brand-wiki/assets/uaethrive-wordmark.svg",
+          "status": "awaiting_authoritative_approval"
+        },
+        {
+          "variant": "favicon",
+          "path": "brand-registry/candidates/uaethrive/public-favicon.svg",
+          "source": "Abneos/uaethrive-platform:apps/web/public/favicon.svg",
+          "status": "conflicts_with_alternative"
+        },
+        {
+          "variant": "favicon",
+          "path": "brand-registry/candidates/uaethrive/root-public-favicon.svg",
+          "source": "Abneos/uaethrive-platform:public/favicon.svg",
+          "status": "conflicts_with_alternative"
+        }
+      ]
     },
     "bookbizzy": {
       "status": "pending_assets",
