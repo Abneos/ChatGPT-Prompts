@@ -59,6 +59,8 @@ export function render(options) {
   const x=position.endsWith('right')?width-margin-logoWidth:margin;
   const y=position.startsWith('bottom')?height-margin-logoHeight:margin;
   const bgPath=resolve(options.background);
+  // Backgrounds must be raster: reject potentially active/untrusted SVG documents.
+  if(!['.png','.jpg','.jpeg','.webp'].includes(extname(bgPath).toLowerCase())) fail('Background must be PNG, JPEG or WebP');
   const bg=readFileSync(bgPath);
   const background='data:'+media(bgPath)+';base64,'+bg.toString('base64');
   const logo='data:'+media(path)+';base64,'+bytes.toString('base64');
