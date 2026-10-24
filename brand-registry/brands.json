@@ -10,10 +10,19 @@
       "approved_by": null
     },
     "uaethrive": {
-      "status": "pending_assets",
-      "assets": {},
-      "approved_at": null,
-      "approved_by": null,
+      "status": "approved",
+      "assets": {
+        "wordmark": {
+          "path": "brand-registry/assets/uaethrive/wordmark-v1.svg",
+          "version": "1.0",
+          "width": 220,
+          "height": 54,
+          "sha256": "85d856455458ccccc5439dd03646c225e4465c1ebe0861cff620462e82503c6c",
+          "scope": "brand-wiki-wordmark; broader usage requires review"
+        }
+      },
+      "approved_at": "2026-10-24",
+      "approved_by": "Existing UAEThrive Brand Wiki Visual Standards (wordmark only; favicon unresolved)",
       "candidates": [
         {
           "variant": "wordmark",
