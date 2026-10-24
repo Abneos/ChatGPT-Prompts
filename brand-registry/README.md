@@ -34,3 +34,23 @@ The SVG output embeds the unchanged original bytes of the approved SVG/PNG logo 
 Test with `node --test brand-registry/render.test.mjs`.
 
 **Security:** only approved local registry files should be used for logos. Background must be a locally supplied, trusted image file. Do not feed untrusted SVG from external sources into public render pipelines without sanitising it.
+
+## Deterministic social/OG artwork renderer
+
+Install dependencies in an isolated environment:
+
+```sh
+python -m pip install -r brand-registry/requirements.txt
+node brand-registry/validate.mjs
+python -m unittest discover -s brand-registry -p 'test_*.py'
+```
+
+Once a brand has approved original files registered with matching SHA-256 hashes:
+
+```sh
+python brand-registry/render.py --brand uaethrive --variant primary --background creative-background.png --output final-social.png --anchor bottom-right --margin 64
+```
+
+The renderer never generates or approximates branding. It overlays the registered image bytes after checksum verification. A brand without approved assets fails closed; it cannot produce a falsely branded image.
+
+**Scope:** This is a local rendering utility, not an API or automatically deployed service. Existing ChatGPT image generation cannot automatically consume private GitHub assets without a connected retrieval/compositing workflow.
