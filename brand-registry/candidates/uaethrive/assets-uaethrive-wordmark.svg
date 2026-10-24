@@ -1,0 +1,10 @@
+<svg width="220" height="54" viewBox="0 0 220 54" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">UAEThrive wordmark</title>
+  <desc id="desc">UAEThrive text wordmark in deep blue and teal.</desc>
+  <rect width="220" height="54" rx="12" fill="white"/>
+  <text x="14" y="35" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="-0.8">
+    <tspan fill="#0B3A6A">UAE</tspan><tspan fill="#008080">Thrive</tspan>
+  </text>
+  <path d="M190 18c6.8 0 12 5.2 12 12s-5.2 12-12 12-12-5.2-12-12 5.2-12 12-12Z" fill="#E8F6F5"/>
+  <path d="M184 30.4l4.2 4.2 8.6-9.8" stroke="#00C2B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
