@@ -14,7 +14,8 @@ for(const [brand,entry] of Object.entries(doc.brands??{})){
   if(entry.status!=='approved') continue;
   if(!entry.approved_by||!entry.approved_at||!Object.keys(entry.assets??{}).length) errors.push(brand+': missing approval metadata/assets');
   for(const [kind,asset] of Object.entries(entry.assets??{})){
-    if(!asset.path||!asset.sha256||!asset.version||!Number.isFinite(asset.width)||asset.width<=0||!Number.isFinite(asset.height)||asset.height<=0) {errors.push(brand+'/'+kind+': missing path/hash/version/positive dimensions');continue;}\n    if(!/^[a-f0-9]{64}$/i.test(asset.sha256)) {errors.push(brand+'/'+kind+': invalid SHA-256 format');continue;}
+    if(!asset.path||!asset.sha256||!asset.version||!Number.isFinite(asset.width)||asset.width<=0||!Number.isFinite(asset.height)||asset.height<=0) {errors.push(brand+'/'+kind+': missing path/hash/version/positive dimensions');continue;}
+    if(!/^[a-f0-9]{64}$/i.test(asset.sha256)) {errors.push(brand+'/'+kind+': invalid SHA-256 format');continue;}
     const absolute=resolve(root,asset.path);
     const rel=relative(resolve(root,'brand-registry/assets'),absolute);
     if(isAbsolute(rel)||rel==='..'||rel.startsWith('../')||!existsSync(absolute)){errors.push(brand+'/'+kind+': asset path not found or escapes registry');continue;}
