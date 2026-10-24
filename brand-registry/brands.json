@@ -7,7 +7,15 @@
       "status": "pending_assets",
       "assets": {},
       "approved_at": null,
-      "approved_by": null
+      "approved_by": null,
+      "candidates": [
+        {
+          "variant": "favicon",
+          "source": "Abneos/abneos-website:index.html inline data URI",
+          "record": "brand-registry/candidates/abneos.md",
+          "status": "awaiting_authoritative_approval"
+        }
+      ]
     },
     "uaethrive": {
       "status": "approved",
