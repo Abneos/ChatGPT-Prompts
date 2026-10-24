@@ -3,9 +3,9 @@
 // Node 20+. Usage:
 // node brand-registry/render.mjs --brand abneos --variant primary --background /tmp/bg.png --out /tmp/out.svg
 // Optional: --width 1200 --height 630 --logo-width 340 --margin 56 --position bottom-right --manifest custom.json
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, realpathSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { resolve, dirname, relative, isAbsolute, extname } from 'node:path';
+import { resolve, dirname, relative, isAbsolute, extname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 function fail(message) { throw new Error(message); }
@@ -45,7 +45,8 @@ export function render(options) {
   if(!options.background || !options.out) fail('Background and output paths required');
   const path=resolve(root,asset.path);
   const rel=relative(resolve(root,'brand-registry/assets'),path);
-  if(isAbsolute(rel)||rel==='..'||rel.startsWith('../')) fail('Asset must be inside registry assets');
+  if(isAbsolute(rel)||rel==='..'||rel.startsWith('..'+sep)) fail('Asset must be inside registry assets');
+  if(!realpathSync(path).startsWith(realpathSync(resolve(root,'brand-registry/assets'))+sep)) fail('Asset symlink escapes approved registry');
   const bytes=readFileSync(path);
   if(createHash('sha256').update(bytes).digest('hex')!==asset.sha256) fail('Approved asset hash mismatch');
   const width=positiveNumber(options.width??1200,'width');
