@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "policy": "standards/ABNEOS_BRAND_IDENTITY_STANDARD.md",
+  "note": "No files are marked approved until exact authorised originals have been verified.",
+  "brands": {
+    "abneos": {
+      "status": "pending_assets",
+      "assets": {},
+      "approved_at": null,
+      "approved_by": null
+    },
+    "uaethrive": {
+      "status": "pending_assets",
+      "assets": {},
+      "approved_at": null,
+      "approved_by": null
+    },
+    "bookbizzy": {
+      "status": "pending_assets",
+      "assets": {},
+      "approved_at": null,
+      "approved_by": null
+    },
+    "warmecohome": {
+      "status": "pending_assets",
+      "assets": {},
+      "approved_at": null,
+      "approved_by": null
+    },
+    "abneos4schools": {
+      "status": "pending_assets",
+      "assets": {},
+      "approved_at": null,
+      "approved_by": null
+    },
+    "abneosed": {
+      "status": "pending_assets",
+      "assets": {},
+      "approved_at": null,
+      "approved_by": null
+    },
+    "bizthrive": {
+      "status": "pending_assets",
+      "assets": {},
+      "approved_at": null,
+      "approved_by": null
+    },
+    "mylocalseoguru": {
+      "status": "pending_assets",
+      "assets": {},
+      "approved_at": null,
+      "approved_by": null
+    },
+    "janeclarkhistory": {
+      "status": "pending_assets",
+      "assets": {},
+      "approved_at": null,
+      "approved_by": null
+    },
+    "heatingbexley": {
+      "status": "pending_assets",
+      "assets": {},
+      "approved_at": null,
+      "approved_by": null
+    },
+    "uanduni": {
+      "status": "pending_assets",
+      "assets": {},
+      "approved_at": null,
+      "approved_by": null
+    }
+  }
+}
