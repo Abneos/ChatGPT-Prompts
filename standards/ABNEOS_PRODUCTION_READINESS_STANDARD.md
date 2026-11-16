@@ -157,3 +157,8 @@ For every material release:
 6. Verify canonical/indexability behaviour.
 7. Re-run affected readiness checks.
 8. Record residual WARNING/DEFERRED items and owner/next action.
+
+
+## Standing infrastructure and CI cost policy
+
+For infrastructure, CI/CD, runtime automation, scheduled processing and communications, also apply the [Abneos Infrastructure and CI Cost Standard](ABNEOS_INFRASTRUCTURE_CI_COST_STANDARD.md). Prefer the existing Cloudflare runtime and compatible cost-effective native builds; retain GitHub source control and essential checks. Verify costs and equivalent release safeguards before changing the deployment route.
