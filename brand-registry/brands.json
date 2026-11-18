@@ -27,6 +27,17 @@
           "height": 54,
           "sha256": "85d856455458ccccc5439dd03646c225e4465c1ebe0861cff620462e82503c6c",
           "scope": "brand-wiki-wordmark; broader usage requires review"
+        },
+        "favicon": {
+          "path": "brand-registry/assets/uaethrive/favicon-v1.svg",
+          "version": "1.0",
+          "width": 64,
+          "height": 64,
+          "sha256": "2173769f8e0fa625d33ef92f870c9fbea1f3a85701644bd95ab402eb7f862fc7",
+          "scope": "events.uaethrive.com favicon",
+          "approved_by": "Alan Clark",
+          "approved_at": "2026-11-18",
+          "source": "https://uaethrive.com/favicon.svg"
         }
       },
       "approved_at": "2026-10-24",
